@@ -12,9 +12,9 @@
 #define CACHESIM_H_INCLUDED
 
 /* Please adjust parameters here */
-#define X 1024 //Cachesize in KB
-#define Y 10 //log2(X)
-#define N 4 // N-way cache
+#define X {} //Cachesize in KB
+#define Y {} //log2(X)
+#define N {} // N-way cache
 
 #define CACHE_SIZE 1024*X // AREA = INDEX_SIZE*BLOCK_SIZE
 #define INDEX_SIZE 256*X // HEIGHT = = 2^INDEXLEN
@@ -25,12 +25,12 @@
 
 typedef unsigned char Byte;
 typedef unsigned char bool;
-typedef struct Cache{
+typedef struct Cache{{
     bool valid;
     bool dirty;
     unsigned long tag;
 	Byte data[BLOCK_SIZE];
     size_t lastuse;
-};
+}};
 
 #endif // CACHESIM_H_INCLUDED

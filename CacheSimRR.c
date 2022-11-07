@@ -20,7 +20,6 @@
 long MISS;
 long HIT;
 
-# define N 2
 struct Cache cache[INDEX_SIZE][N];
 int rr[INDEX_SIZE];
 
